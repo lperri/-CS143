@@ -1,0 +1,46 @@
+
+-- 2(a)
+CREATE TYPE scooter_status AS ENUM('online','offline','lost/stolen')
+CREATE TABLE Scooter(
+    QR_Code integer NOT NULL,
+    Status scooter_status NOT NULL,
+    Location point NOT NULL,
+    Home_Assignment circle,
+    PRIMARY KEY (QR_code)
+);
+
+CREATE TABLE User(
+    User_ID varchar(6) NOT NULL,
+    Credit_Num varchar(16),
+    Security_Code varchar(3) CHECK (NOT(Credit_Num NULL AND Security_Code NULL)),
+    Email varchar(30) NOT NULL,
+    PRIMARY KEY (User_ID)
+);
+
+
+-- 2(b)
+CREATE TABLE trip(
+    Trip_ID varchar  NOT NULL,
+    In_Progress boolean,
+    Distance numeric(4,2) NOT NULL CHECK (Distance >= 0),
+    Activation_location point,
+    Park_location point,
+    Start_time timestamptz,
+    End_time timestamptz,
+    Duration interval NOT NULL CHECK (Interval >= 0),
+    PRIMARY KEY (Trip_ID),
+    FOREIGN KEY(QR_Code) REFERENCES Scooter,
+    FOREIGN KEY(User_ID) REFERENCES User
+);
+
+-- 2(c)
+-- The advantage of inserting the row and modifying the row is that you bypass dealing with phone issues (if it dies or doesn't have service mid-ride, what happens to your data?). However, caching data on the phone and then uploading to DB makes it so that your actual DB requires less modification. I would prefer to risk losing some user data (and in the case of issues, just lose that money) than the insert+modify b/c I would imagine the "cost" of perpetually modifying the DB would be greater.
+
+-- 2(d)
+-- Schema diagram in separate file.
+
+-- Things to think about: Would you include the number of minutes the trip lasted in the Trip table? why or why not? 
+    --Yes b/c you need that info to charge the user; although you can always EXTRACT the number of minutes (duration) from the records of start_time & end_time, you would need to perform this function for every single trip, so makes sense to store it as an attribute
+
+--What are the advantages/disadvantages of including charge to user in the Trip table? disadvantage: would need to store user ID as a foreign key, wasteful b/c can always compute from duration of trip. advantage: wouldn't have to use a join trip & user tables in a query to figure out how much a user was charged for a given trip 
+

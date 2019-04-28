@@ -17,6 +17,6 @@ LEFT JOIN temp_table ON token.token = temp_table.token;
 
 WITH variable_j AS 
     (SELECT COUNT(song_id) AS j FROM song)
-SELECT song_id,token,(term_freq*LOG(j/doc_freq)) AS score INTO TEMPORARY practice_tfidf FROM temp_table_joined,variable_j limit 20;
+SELECT song_id,token,(term_freq*LOG(j/doc_freq)) AS score INTO TEMPORARY practice_tfidf FROM temp_table_joined,variable_j;
 
 

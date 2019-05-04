@@ -6693,3 +6693,510 @@ Python auto-reloader enabled
 [pid: 2616|app: -1|req: -1/4] 10.0.2.2 () {40 vars in 511 bytes} [Fri May  3 22:35:10 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
 --- no python application found, check your startup logs for errors ---
 [pid: 2616|app: -1|req: -1/5] 10.0.2.2 () {40 vars in 511 bytes} [Fri May  3 22:35:12 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2616|app: -1|req: -1/6] 10.0.2.2 () {42 vars in 1056 bytes} [Fri May  3 22:50:35 2019] GET /search?query_type=or&query=hello+goodbye => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2616|app: -1|req: -1/7] 10.0.2.2 () {42 vars in 977 bytes} [Fri May  3 22:50:38 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2616|app: -1|req: -1/8] 10.0.2.2 () {44 vars in 1008 bytes} [Fri May  3 22:50:46 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2616|app: -1|req: -1/9] 10.0.2.2 () {44 vars in 1001 bytes} [Fri May  3 22:51:12 2019] GET / => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM WARNING: unix socket /tmp/searchengine.sock changed inode. Skip removal
+*** Starting uWSGI 2.0.18 (64bit) on [Fri May  3 22:54:06 2019] ***
+compiled with version: 7.3.0 on 30 March 2019 03:07:46
+os: Linux-4.15.0-46-generic #49-Ubuntu SMP Wed Feb 6 09:33:07 UTC 2019
+nodename: cs143-19s-p1
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /media/sf_vm-shared/SearchEngine
+detected binary path: /home/cs143/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7804
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /tmp/searchengine.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55dd942183b0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55dd942183b0 pid: 698 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 698)
+spawned uWSGI worker 1 (pid: 752, cores: 1)
+spawned uWSGI worker 2 (pid: 753, cores: 1)
+spawned uWSGI worker 3 (pid: 754, cores: 1)
+spawned uWSGI worker 4 (pid: 755, cores: 1)
+spawned uWSGI worker 5 (pid: 756, cores: 1)
+Python auto-reloader enabled
+[pid: 753|app: 0|req: 1/1] 10.0.2.2 () {42 vars in 977 bytes} [Fri May  3 22:54:33 2019] GET / => generated 1162 bytes in 37 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 753|app: 0|req: 2/2] 10.0.2.2 () {44 vars in 1096 bytes} [Fri May  3 22:54:41 2019] GET /search?query_type=and&query=hello+goodbye => generated 1000 bytes in 7773 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Fri May  3 22:55:36 2019] ***
+compiled with version: 7.3.0 on 30 March 2019 03:07:46
+os: Linux-4.15.0-46-generic #49-Ubuntu SMP Wed Feb 6 09:33:07 UTC 2019
+nodename: cs143-19s-p1
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /media/sf_vm-shared/SearchEngine
+detected binary path: /home/cs143/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7804
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /tmp/searchengine.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55951cbd83b0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55951cbd83b0 pid: 783 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 783)
+spawned uWSGI worker 1 (pid: 785, cores: 1)
+spawned uWSGI worker 2 (pid: 786, cores: 1)
+spawned uWSGI worker 3 (pid: 787, cores: 1)
+spawned uWSGI worker 4 (pid: 788, cores: 1)
+spawned uWSGI worker 5 (pid: 789, cores: 1)
+Python auto-reloader enabled
+[pid: 786|app: 0|req: 1/1] 10.0.2.2 () {44 vars in 1096 bytes} [Fri May  3 23:02:41 2019] GET /search?query_type=and&query=hello+goodbye => generated 1000 bytes in 579 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+relation "mat_view_results" does not exist
+LINE 1: ...uery.artist_id = a.artist_id;SELECT COUNT(*) FROM mat_view_r...
+                                                             ^
+
+Traceback (most recent call last):
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/cs143/www/SearchEngine/SearchEngine/searchengine.py", line 14, in dosearch
+    search_results = search.search(query, qtype)
+  File "/home/cs143/www/SearchEngine/SearchEngine/search.py", line 83, in search
+    if num_lines:
+UnboundLocalError: local variable 'num_lines' referenced before assignment
+[pid: 786|app: 0|req: 2/2] 10.0.2.2 () {44 vars in 1135 bytes} [Fri May  3 23:02:49 2019] GET /search?query_type=or&query=hello+goodbye => generated 0 bytes in 698 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+relation "mat_view_results" does not exist
+LINE 1: ...uery.artist_id = a.artist_id;SELECT COUNT(*) FROM mat_view_r...
+                                                             ^
+
+Traceback (most recent call last):
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/cs143/www/SearchEngine/SearchEngine/searchengine.py", line 14, in dosearch
+    search_results = search.search(query, qtype)
+  File "/home/cs143/www/SearchEngine/SearchEngine/search.py", line 83, in search
+    if num_lines:
+UnboundLocalError: local variable 'num_lines' referenced before assignment
+[pid: 786|app: 0|req: 3/3] 10.0.2.2 () {44 vars in 1135 bytes} [Fri May  3 23:03:01 2019] GET /search?query_type=or&query=hello+goodbye => generated 0 bytes in 586 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 786|app: 0|req: 4/4] 10.0.2.2 () {44 vars in 1086 bytes} [Fri May  3 23:03:20 2019] GET /search?query_type=and&query=kiss+you => generated 985 bytes in 4644 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+Fri May  3 23:04:15 2019 - *** /home/cs143/www/SearchEngine/SearchEngine/search.py has been touched... grace them all !!! ***
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 785)...
+Gracefully killing worker 2 (pid: 786)...
+Gracefully killing worker 3 (pid: 787)...
+Gracefully killing worker 4 (pid: 788)...
+Gracefully killing worker 5 (pid: 789)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /media/sf_vm-shared/SearchEngine
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/tmp/searchengine.sock)
+running /home/cs143/.local/bin/uwsgi
+[uWSGI] getting INI configuration from /home/cs143/www/SearchEngine/searchengine.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Fri May  3 23:04:16 2019] ***
+compiled with version: 7.3.0 on 30 March 2019 03:07:46
+os: Linux-4.15.0-46-generic #49-Ubuntu SMP Wed Feb 6 09:33:07 UTC 2019
+nodename: cs143-19s-p1
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /media/sf_vm-shared/SearchEngine
+detected binary path: /home/cs143/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7804
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /tmp/searchengine.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55ee1cd28330
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55ee1cd28330 pid: 783 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 783)
+spawned uWSGI worker 1 (pid: 861, cores: 1)
+spawned uWSGI worker 2 (pid: 862, cores: 1)
+spawned uWSGI worker 3 (pid: 863, cores: 1)
+spawned uWSGI worker 4 (pid: 864, cores: 1)
+spawned uWSGI worker 5 (pid: 865, cores: 1)
+Python auto-reloader enabled
+[pid: 862|app: 0|req: 1/1] 10.0.2.2 () {44 vars in 1001 bytes} [Fri May  3 23:04:32 2019] GET / => generated 1162 bytes in 27 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+relation "mat_view_results" does not exist
+LINE 1: ...ON subquery.artist_id = a.artist_id;SELECT * FROM mat_view_r...
+                                                             ^
+
+Traceback (most recent call last):
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/cs143/www/SearchEngine/SearchEngine/searchengine.py", line 14, in dosearch
+    search_results = search.search(query, qtype)
+  File "/home/cs143/www/SearchEngine/SearchEngine/search.py", line 83, in search
+    if num_lines:
+NameError: name 'num_lines' is not defined
+[pid: 862|app: 0|req: 2/2] 10.0.2.2 () {44 vars in 1082 bytes} [Fri May  3 23:04:38 2019] GET /search?query_type=or&query=kiss+me => generated 0 bytes in 722 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 861)...
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+Gracefully killing worker 2 (pid: 862)...
+Gracefully killing worker 3 (pid: 863)...
+Gracefully killing worker 4 (pid: 864)...
+Gracefully killing worker 5 (pid: 865)...
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/logging/__init__.py", line 1945, in shutdown
+    h.flush()
+  File "/usr/lib/python3.6/logging/__init__.py", line 977, in flush
+    if self.stream and hasattr(self.stream, "flush"):
+  File "/home/cs143/.local/lib/python3.6/site-packages/werkzeug/local.py", line 329, in __bool__
+    return bool(self._get_current_object())
+  File "/home/cs143/.local/lib/python3.6/site-packages/werkzeug/local.py", line 307, in _get_current_object
+    return self.__local()
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/logging.py", line 30, in wsgi_errors_stream
+    return request.environ['wsgi.errors'] if request else sys.stderr
+KeyError: 'wsgi.errors'
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /media/sf_vm-shared/SearchEngine
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/tmp/searchengine.sock)
+running /home/cs143/.local/bin/uwsgi
+[uWSGI] getting INI configuration from /home/cs143/www/SearchEngine/searchengine.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Fri May  3 23:06:16 2019] ***
+compiled with version: 7.3.0 on 30 March 2019 03:07:46
+os: Linux-4.15.0-46-generic #49-Ubuntu SMP Wed Feb 6 09:33:07 UTC 2019
+nodename: cs143-19s-p1
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /media/sf_vm-shared/SearchEngine
+detected binary path: /home/cs143/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7804
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /tmp/searchengine.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x5651c758f330
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5651c758f330 pid: 783 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 783)
+spawned uWSGI worker 1 (pid: 895, cores: 1)
+spawned uWSGI worker 2 (pid: 896, cores: 1)
+spawned uWSGI worker 3 (pid: 897, cores: 1)
+spawned uWSGI worker 4 (pid: 898, cores: 1)
+spawned uWSGI worker 5 (pid: 899, cores: 1)
+Python auto-reloader enabled
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+...gracefully killing workers...
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+Gracefully killing worker 1 (pid: 895)...
+Gracefully killing worker 2 (pid: 896)...
+Gracefully killing worker 3 (pid: 897)...
+Gracefully killing worker 4 (pid: 898)...
+Gracefully killing worker 5 (pid: 899)...
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /media/sf_vm-shared/SearchEngine
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/tmp/searchengine.sock)
+running /home/cs143/.local/bin/uwsgi
+[uWSGI] getting INI configuration from /home/cs143/www/SearchEngine/searchengine.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Fri May  3 23:07:25 2019] ***
+compiled with version: 7.3.0 on 30 March 2019 03:07:46
+os: Linux-4.15.0-46-generic #49-Ubuntu SMP Wed Feb 6 09:33:07 UTC 2019
+nodename: cs143-19s-p1
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /media/sf_vm-shared/SearchEngine
+detected binary path: /home/cs143/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7804
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /tmp/searchengine.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x5616deeed330
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5616deeed330 pid: 783 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 783)
+spawned uWSGI worker 1 (pid: 918, cores: 1)
+spawned uWSGI worker 2 (pid: 919, cores: 1)
+spawned uWSGI worker 3 (pid: 920, cores: 1)
+spawned uWSGI worker 4 (pid: 921, cores: 1)
+spawned uWSGI worker 5 (pid: 922, cores: 1)
+Python auto-reloader enabled
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 918)...
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+Gracefully killing worker 2 (pid: 919)...
+Gracefully killing worker 3 (pid: 920)...
+Gracefully killing worker 4 (pid: 921)...
+Gracefully killing worker 5 (pid: 922)...
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /media/sf_vm-shared/SearchEngine
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/tmp/searchengine.sock)
+running /home/cs143/.local/bin/uwsgi
+[uWSGI] getting INI configuration from /home/cs143/www/SearchEngine/searchengine.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Fri May  3 23:09:45 2019] ***
+compiled with version: 7.3.0 on 30 March 2019 03:07:46
+os: Linux-4.15.0-46-generic #49-Ubuntu SMP Wed Feb 6 09:33:07 UTC 2019
+nodename: cs143-19s-p1
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /media/sf_vm-shared/SearchEngine
+detected binary path: /home/cs143/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7804
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /tmp/searchengine.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x562a47f25330
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x562a47f25330 pid: 783 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 783)
+spawned uWSGI worker 1 (pid: 945, cores: 1)
+spawned uWSGI worker 2 (pid: 946, cores: 1)
+spawned uWSGI worker 3 (pid: 947, cores: 1)
+spawned uWSGI worker 4 (pid: 949, cores: 1)
+spawned uWSGI worker 5 (pid: 950, cores: 1)
+Python auto-reloader enabled
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+...gracefully killing workers...
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+Gracefully killing worker 1 (pid: 945)...
+Gracefully killing worker 2 (pid: 946)...
+Gracefully killing worker 3 (pid: 947)...
+Gracefully killing worker 4 (pid: 949)...
+Gracefully killing worker 5 (pid: 950)...
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+[uwsgi-python-reloader] module/file /home/cs143/www/SearchEngine/SearchEngine/search.py has been modified
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /media/sf_vm-shared/SearchEngine
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/tmp/searchengine.sock)
+running /home/cs143/.local/bin/uwsgi
+[uWSGI] getting INI configuration from /home/cs143/www/SearchEngine/searchengine.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Fri May  3 23:11:30 2019] ***
+compiled with version: 7.3.0 on 30 March 2019 03:07:46
+os: Linux-4.15.0-46-generic #49-Ubuntu SMP Wed Feb 6 09:33:07 UTC 2019
+nodename: cs143-19s-p1
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /media/sf_vm-shared/SearchEngine
+detected binary path: /home/cs143/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7804
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /tmp/searchengine.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x5619fe4cd330
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5619fe4cd330 pid: 783 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 783)
+spawned uWSGI worker 1 (pid: 965, cores: 1)
+spawned uWSGI worker 2 (pid: 966, cores: 1)
+spawned uWSGI worker 3 (pid: 967, cores: 1)
+spawned uWSGI worker 4 (pid: 968, cores: 1)
+spawned uWSGI worker 5 (pid: 969, cores: 1)
+Python auto-reloader enabled
+Fri May  3 23:11:54 2019 - *** /home/cs143/www/SearchEngine/SearchEngine/search.py has been touched... grace them all !!! ***
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 965)...
+Gracefully killing worker 2 (pid: 966)...
+Gracefully killing worker 3 (pid: 967)...
+Gracefully killing worker 4 (pid: 968)...
+Gracefully killing worker 5 (pid: 969)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /media/sf_vm-shared/SearchEngine
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/tmp/searchengine.sock)
+running /home/cs143/.local/bin/uwsgi
+[uWSGI] getting INI configuration from /home/cs143/www/SearchEngine/searchengine.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Fri May  3 23:11:55 2019] ***
+compiled with version: 7.3.0 on 30 March 2019 03:07:46
+os: Linux-4.15.0-46-generic #49-Ubuntu SMP Wed Feb 6 09:33:07 UTC 2019
+nodename: cs143-19s-p1
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /media/sf_vm-shared/SearchEngine
+detected binary path: /home/cs143/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7804
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /tmp/searchengine.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55ca199b2330
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55ca199b2330 pid: 783 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 783)
+spawned uWSGI worker 1 (pid: 980, cores: 1)
+spawned uWSGI worker 2 (pid: 981, cores: 1)
+spawned uWSGI worker 3 (pid: 982, cores: 1)
+spawned uWSGI worker 4 (pid: 983, cores: 1)
+spawned uWSGI worker 5 (pid: 984, cores: 1)
+Python auto-reloader enabled

@@ -53,8 +53,8 @@ def search(query, query_type, iteration=1,offset=0):
     
     elif query_type == "or" and iteration == 1:
         rewritten_query_joined = " OR token = ".join("'{}'".format(w) for w in rewritten_query)
-        full_query = "CREATE MATERIALIZED VIEW test_view AS SELECT subquery.page_link,a.artist_name FROM (SELECT l.song_id,l.artist_id,l.page_link,SUM(r.score) FROM song AS l JOIN tfidf AS r ON l.song_id = r.song_id WHERE token = {} GROUP BY l.song_id ORDER BY SUM(score) DESC) as subquery JOIN artist AS a ON subquery.artist_id = a.artist_id;".format(rewritten_query_joined) + "SELECT COUNT(*) FROM mat_view_results;" 
-        pag_query = "CREATE MATERIALIZED VIEW test_view AS SELECT subquery.page_link,a.artist_name FROM (SELECT l.song_id,l.artist_id,l.page_link,SUM(r.score) FROM song AS l JOIN tfidf AS r ON l.song_id = r.song_id WHERE token = {} GROUP BY l.song_id ORDER BY SUM(score) DESC) as subquery JOIN artist AS a ON subquery.artist_id = a.artist_id;".format(rewritten_query_joined) + "SELECT * FROM mat_view_results LIMIT {} OFFSET {};".format(per_page,offset) 
+        full_query = "CREATE MATERIALIZED VIEW mat_view_results AS SELECT subquery.page_link,a.artist_name FROM (SELECT l.song_id,l.artist_id,l.page_link,SUM(r.score) FROM song AS l JOIN tfidf AS r ON l.song_id = r.song_id WHERE token = {} GROUP BY l.song_id ORDER BY SUM(score) DESC) as subquery JOIN artist AS a ON subquery.artist_id = a.artist_id;".format(rewritten_query_joined) + "SELECT COUNT(*) FROM mat_view_results;" 
+        pag_query = "CREATE MATERIALIZED VIEW mat_view_results AS SELECT subquery.page_link,a.artist_name FROM (SELECT l.song_id,l.artist_id,l.page_link,SUM(r.score) FROM song AS l JOIN tfidf AS r ON l.song_id = r.song_id WHERE token = {} GROUP BY l.song_id ORDER BY SUM(score) DESC) as subquery JOIN artist AS a ON subquery.artist_id = a.artist_id;".format(rewritten_query_joined) + "SELECT * FROM mat_view_results LIMIT {} OFFSET {};".format(per_page,offset) 
     
     else:
         query = "SELECT * FROM mat_view_results LIMIT {} OFFSET {};".format(per_page,offset)
@@ -69,9 +69,10 @@ def search(query, query_type, iteration=1,offset=0):
         cursor = connection.cursor()
         if drop_mat_view:
             cursor.execute(drop_mat_view)
-            cursor.execute(full_query)
-            num_lines = (cursor.fetchall())[0][0]
-        #cursor.execute(pag_query)
+#            cursor.execute(full_query)
+#            num_lines = (cursor.fetchall())[0][0]
+        import pdb;pdb.set_trace()
+        cursor.execute(pag_query)
         connection.commit()
         rows = cursor.fetchall() 
         cursor.close()
@@ -80,9 +81,9 @@ def search(query, query_type, iteration=1,offset=0):
     finally:
         if connection is not None:
             connection.close()
-    if num_lines:
-        return num_lines,rows
-    else:
+#    if num_lines:
+#        return num_lines,rows
+#    else:
         return rows
 
 if __name__ == "__main__":

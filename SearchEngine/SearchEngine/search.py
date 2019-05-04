@@ -71,7 +71,6 @@ def search(query, query_type, iteration=1,offset=0):
             cursor.execute(drop_mat_view)
 #            cursor.execute(full_query)
 #            num_lines = (cursor.fetchall())[0][0]
-        import pdb;pdb.set_trace()
         cursor.execute(pag_query)
         connection.commit()
         rows = cursor.fetchall() 

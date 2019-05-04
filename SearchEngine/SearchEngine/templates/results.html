@@ -15,14 +15,44 @@
 						<label for="or">OR</label>
 						<input type="radio" name="query_type" value="and">
 						<label for="and">AND</label>
-						<input type="text" maxlength=50 size=50 name="query" value="{{query}}"><input type="submit" value="Search">
+						<input type="text" maxlength=50 size=50 name="query" value="{{query}}">
+						<input type="submit" value="Search">
 					</div>
 				</form>
+				
+			</div>
+
+			<div>
+			{% if page > 1 %}
+			<form action="{{ url_for('dosearch') }}" method="GET">
+				<div>
+					<input type="hidden" name="query_type" value="{{query_type}}">
+					<input type="hidden" name="query" value="{{query}}">
+					<input type="hidden" name="page" value="{{page}}">
+					<input type="hidden" name="num_lines" value="{{num_lines}}">
+					<input type="submit" name="prev" value="Prev">
+				</div>
+			</form>
+			{% endif %}
+			
+			 <form action="{{ url_for('dosearch') }}" method="GET">
+				<div>
+					<input type="hidden" name="query_type" value="{{query_type}}">
+					<input type="hidden" name="query" value="{{query}}">
+					<input type="hidden" name="page" value="{{page}}">
+					<input type="hidden" name="num_lines" value="{{num_lines}}">
+					<input type="submit" name="next" value="Next"> 
+				</div>
+			</form>
 			</div>
 		</div>
 
+
+
+
+
 		{% if results > 0 %}
-		<p><strong>{{ results }} results for </strong>{{query}}</p>
+		<p><strong>{{ results }} results for </strong>{{query}} Page {{page}}, Results {{num_lines}}</p>
 
 		{% for result in search_results %}
 		<p><strong><a href="http://www.lyricsfreak.com{{ result[2] }}" target="_blank">{{ result[0] }}</a></strong> <em>by</em> {{ result[1] }} </p>

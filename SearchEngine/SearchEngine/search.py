@@ -37,27 +37,24 @@ def _get_tokens(query):
 
 
 
-def search(query, query_type, iteration=1,offset=0):
+def search(query, query_type, page=1):
     rewritten_query = _get_tokens(query)
 
-    if iteration == 1:
-        drop_mat_view = "DROP MATERIALIZED VIEW IF EXISTS mat_view_results;"
+    drop_mat_view = "DROP MATERIALIZED VIEW IF EXISTS mat_view_results;"
     
     per_page = 20
+    offset = (page-1)*per_page
     
-    if query_type == "and" and iteration == 1:
+    if query_type == "and":
         rewritten_query_joined = ") AND song_id IN (SELECT song_id FROM tfidf WHERE token=".join("'{}'".format(w) for w in rewritten_query)
-        full_query = "CREATE MATERIALIZED VIEW mat_view_results AS SELECT song.song_name AS song_name,artist.artist_name AS artist_name,song.page_link AS link,SUM(subquery.score) FROM (SELECT song_id,token,score FROM tfidf WHERE song_id IN (SELECT song_id FROM tfidf WHERE token={}) GROUP BY song_id,token) AS subquery JOIN song ON subquery.song_id=song.song_id JOIN artist ON song.artist_id=artist.artist_id GROUP BY song.song_name,artist.artist_name,song.page_link ORDER BY SUM(subquery.score) DESC;".format(rewritten_query_joined) + "SELECT COUNT(*) FROM mat_view_results;"
-        pag_query = "CREATE MATERIALIZED VIEW mat_view_results AS SELECT song.song_name AS song_name,artist.artist_name AS artist_name,song.page_link AS link,SUM(subquery.score) FROM (SELECT song_id,token,score FROM tfidf WHERE song_id IN (SELECT song_id FROM tfidf WHERE token={}) GROUP BY song_id,token) AS subquery JOIN song ON subquery.song_id=song.song_id JOIN artist ON song.artist_id=artist.artist_id GROUP BY song.song_name,artist.artist_name,song.page_link ORDER BY SUM(subquery.score) DESC;".format(rewritten_query_joined) + "SELECT * FROM mat_view_results LIMIT {} OFFSET {};".format(per_page,offset)
+        create_query = "CREATE MATERIALIZED VIEW mat_view_results AS SELECT song.song_name AS song_name,artist.artist_name AS artist_name,song.page_link AS link,SUM(subquery.score) FROM (SELECT song_id,token,score FROM tfidf WHERE song_id IN (SELECT song_id FROM tfidf WHERE token={}) GROUP BY song_id,token) AS subquery JOIN song ON subquery.song_id=song.song_id JOIN artist ON song.artist_id=artist.artist_id GROUP BY song.song_name,artist.artist_name,song.page_link ORDER BY SUM(subquery.score) DESC;".format(rewritten_query_joined) 
 
-    
-    elif query_type == "or" and iteration == 1:
+    elif query_type == "or":
         rewritten_query_joined = " OR token = ".join("'{}'".format(w) for w in rewritten_query)
-        full_query = "CREATE MATERIALIZED VIEW mat_view_results AS SELECT subquery.page_link,a.artist_name FROM (SELECT l.song_id,l.artist_id,l.page_link,SUM(r.score) FROM song AS l JOIN tfidf AS r ON l.song_id = r.song_id WHERE token = {} GROUP BY l.song_id ORDER BY SUM(score) DESC) as subquery JOIN artist AS a ON subquery.artist_id = a.artist_id;".format(rewritten_query_joined) + "SELECT COUNT(*) FROM mat_view_results;" 
-        pag_query = "CREATE MATERIALIZED VIEW mat_view_results AS SELECT subquery.page_link,a.artist_name FROM (SELECT l.song_id,l.artist_id,l.page_link,SUM(r.score) FROM song AS l JOIN tfidf AS r ON l.song_id = r.song_id WHERE token = {} GROUP BY l.song_id ORDER BY SUM(score) DESC) as subquery JOIN artist AS a ON subquery.artist_id = a.artist_id;".format(rewritten_query_joined) + "SELECT * FROM mat_view_results LIMIT {} OFFSET {};".format(per_page,offset) 
+        create_query = "CREATE MATERIALIZED VIEW mat_view_results AS SELECT subquery.page_link,a.artist_name FROM (SELECT l.song_id,l.artist_id,l.page_link,SUM(r.score) FROM song AS l JOIN tfidf AS r ON l.song_id = r.song_id WHERE token = {} GROUP BY l.song_id ORDER BY SUM(score) DESC) as subquery JOIN artist AS a ON subquery.artist_id = a.artist_id;".format(rewritten_query_joined)
     
-    else:
-        query = "SELECT * FROM mat_view_results LIMIT {} OFFSET {};".format(per_page,offset)
+    count_query = "SELECT COUNT(*) FROM mat_view_results;" 
+    pag_query = "SELECT * FROM mat_view_results LIMIT {} OFFSET {};".format(per_page,offset)
     
     connection = None 
     try:
@@ -67,10 +64,11 @@ def search(query, query_type, iteration=1,offset=0):
             port='5432',
             database='searchengine')
         cursor = connection.cursor()
-        if drop_mat_view:
+        if page == 1:
             cursor.execute(drop_mat_view)
-#            cursor.execute(full_query)
-#            num_lines = (cursor.fetchall())[0][0]
+            cursor.execute(create_query)
+            cursor.execute(count_query)
+            num_lines = (cursor.fetchall())[0][0]
         cursor.execute(pag_query)
         connection.commit()
         rows = cursor.fetchall() 
@@ -80,10 +78,11 @@ def search(query, query_type, iteration=1,offset=0):
     finally:
         if connection is not None:
             connection.close()
-#    if num_lines:
-#        return num_lines,rows
-#    else:
-        return rows
+
+        if page == 1:
+            return num_lines,rows
+        else:
+            return None,rows
 
 if __name__ == "__main__":
     if len(sys.argv) > 2:

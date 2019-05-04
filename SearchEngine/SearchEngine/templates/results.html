@@ -34,8 +34,10 @@
 				</div>
 			</form>
 			{% endif %}
-			
-			 <form action="{{ url_for('dosearch') }}" method="GET">
+			<div/>
+			<div>
+			{% if page < num_lines/20 %}
+			<form action="{{ url_for('dosearch') }}" method="GET">
 				<div>
 					<input type="hidden" name="query_type" value="{{query_type}}">
 					<input type="hidden" name="query" value="{{query}}">
@@ -44,15 +46,16 @@
 					<input type="submit" name="next" value="Next"> 
 				</div>
 			</form>
+			{% endif %}
 			</div>
 		</div>
 
 
 
 
-
+		<div id="results">
 		{% if results > 0 %}
-		<p><strong>{{ results }} results for </strong>{{query}} Page {{page}}, Results {{num_lines}}</p>
+		<p><strong>Results {{[results,20]|max * (page - 1) + 1}}-{{ [results,20]|max*(page-1) + results }} of {{num_lines}} for </strong>{{query}}. Page {{page}} of {{ (num_lines/20 +1)|round|int }}</p>
 
 		{% for result in search_results %}
 		<p><strong><a href="http://www.lyricsfreak.com{{ result[2] }}" target="_blank">{{ result[0] }}</a></strong> <em>by</em> {{ result[1] }} </p>
@@ -61,5 +64,6 @@
 
 		<p><strong>No results for </strong>{{query}}</p>
 		{% endif %}
+		</div>
 	</body>
 </html>

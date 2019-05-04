@@ -21,15 +21,14 @@ body {
 }
 
 #results_top {
-	width:2000px;
+	width:1000px;
 	height:200px;
-	background-color:'yellow';
 	flex-direction:row;
 	/*overflow: hidden;*/
 }
 
 #logo {
-	width:1500px;
+	width:150px;
 	float:left;
 	vertical-align:center;
 }

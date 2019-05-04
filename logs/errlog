@@ -11414,3 +11414,609 @@ Python auto-reloader enabled
 [pid: 1590|app: 0|req: 28/43] 10.0.2.2 () {44 vars in 1001 bytes} [Sat May  4 02:28:24 2019] GET / => generated 1162 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
 [pid: 1590|app: 0|req: 29/44] 10.0.2.2 () {44 vars in 1094 bytes} [Sat May  4 02:28:32 2019] GET /search?query_type=or&query=hello+goodbye => generated 4297 bytes in 595 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
 [pid: 1590|app: 0|req: 30/45] 10.0.2.2 () {44 vars in 1198 bytes} [Sat May  4 02:28:35 2019] GET /search?query_type=or&query=hello+goodbye&page=1&num_lines=2795&next=Next => generated 4638 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 1590|app: 0|req: 31/46] 10.0.2.2 () {46 vars in 1229 bytes} [Sat May  4 02:30:08 2019] GET /search?query_type=or&query=hello+goodbye&page=1&num_lines=2795&next=Next => generated 4638 bytes in 25 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM WARNING: unix socket /tmp/searchengine.sock changed inode. Skip removal
+*** Starting uWSGI 2.0.18 (64bit) on [Sat May  4 02:30:53 2019] ***
+compiled with version: 7.3.0 on 30 March 2019 03:07:46
+os: Linux-4.15.0-46-generic #49-Ubuntu SMP Wed Feb 6 09:33:07 UTC 2019
+nodename: cs143-19s-p1
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /media/sf_vm-shared/SearchEngine
+detected binary path: /home/cs143/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7804
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /tmp/searchengine.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x560f8c56e3b0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x560f8c56e3b0 pid: 635 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 635)
+spawned uWSGI worker 1 (pid: 690, cores: 1)
+spawned uWSGI worker 2 (pid: 691, cores: 1)
+spawned uWSGI worker 3 (pid: 692, cores: 1)
+spawned uWSGI worker 4 (pid: 693, cores: 1)
+spawned uWSGI worker 5 (pid: 694, cores: 1)
+Python auto-reloader enabled
+[pid: 691|app: 0|req: 1/1] 10.0.2.2 () {46 vars in 1229 bytes} [Sat May  4 02:30:57 2019] GET /search?query_type=or&query=hello+goodbye&page=1&num_lines=2795&next=Next => generated 4638 bytes in 106 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 692|app: 0|req: 1/2] 10.0.2.2 () {44 vars in 1001 bytes} [Sat May  4 02:30:59 2019] GET / => generated 1162 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 691|app: 0|req: 2/3] 10.0.2.2 () {44 vars in 1094 bytes} [Sat May  4 02:31:03 2019] GET /search?query_type=or&query=hello+goodbye => generated 4297 bytes in 2159 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 691|app: 0|req: 3/4] 10.0.2.2 () {44 vars in 1198 bytes} [Sat May  4 02:31:08 2019] GET /search?query_type=or&query=hello+goodbye&page=1&num_lines=2795&next=Next => generated 4638 bytes in 12 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Sat May  4 02:32:23 2019] ***
+compiled with version: 7.3.0 on 30 March 2019 03:07:46
+os: Linux-4.15.0-46-generic #49-Ubuntu SMP Wed Feb 6 09:33:07 UTC 2019
+nodename: cs143-19s-p1
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /media/sf_vm-shared/SearchEngine
+detected binary path: /home/cs143/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7804
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /tmp/searchengine.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x557f199363b0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x557f199363b0 pid: 727 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 727)
+spawned uWSGI worker 1 (pid: 729, cores: 1)
+spawned uWSGI worker 2 (pid: 730, cores: 1)
+spawned uWSGI worker 3 (pid: 731, cores: 1)
+spawned uWSGI worker 4 (pid: 732, cores: 1)
+spawned uWSGI worker 5 (pid: 733, cores: 1)
+Python auto-reloader enabled
+[pid: 730|app: 0|req: 1/1] 10.0.2.2 () {46 vars in 1229 bytes} [Sat May  4 02:33:55 2019] GET /search?query_type=or&query=hello+goodbye&page=1&num_lines=2795&next=Next => generated 4654 bytes in 44 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 2/2] 10.0.2.2 () {46 vars in 1229 bytes} [Sat May  4 02:35:53 2019] GET /search?query_type=or&query=hello+goodbye&page=1&num_lines=2795&next=Next => generated 4667 bytes in 23 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 3/3] 10.0.2.2 () {46 vars in 1229 bytes} [Sat May  4 02:35:56 2019] GET /search?query_type=or&query=hello+goodbye&page=1&num_lines=2795&next=Next => generated 4667 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 4/4] 10.0.2.2 () {46 vars in 1229 bytes} [Sat May  4 02:37:08 2019] GET /search?query_type=or&query=hello+goodbye&page=1&num_lines=2795&next=Next => generated 4667 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 5/5] 10.0.2.2 () {44 vars in 1001 bytes} [Sat May  4 02:37:14 2019] GET / => generated 1162 bytes in 8 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 6/6] 10.0.2.2 () {44 vars in 1094 bytes} [Sat May  4 02:37:19 2019] GET /search?query_type=or&query=hello+goodbye => generated 4326 bytes in 627 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 7/7] 10.0.2.2 () {44 vars in 1198 bytes} [Sat May  4 02:37:25 2019] GET /search?query_type=or&query=hello+goodbye&page=1&num_lines=2795&next=Next => generated 4667 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 8/8] 10.0.2.2 () {46 vars in 1229 bytes} [Sat May  4 02:39:44 2019] GET /search?query_type=or&query=hello+goodbye&page=1&num_lines=2795&next=Next => generated 4682 bytes in 23 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 9/9] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 02:39:49 2019] GET /search?query_type=or&query=hello+goodbye&page=2&num_lines=2795&next=Next => generated 4688 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 1/10] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 02:39:50 2019] GET /search?query_type=or&query=hello+goodbye&page=3&num_lines=2795&prev=Prev => generated 4682 bytes in 39 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 10/11] 10.0.2.2 () {44 vars in 1001 bytes} [Sat May  4 02:42:15 2019] GET / => generated 1162 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 11/12] 10.0.2.2 () {44 vars in 1094 bytes} [Sat May  4 02:42:19 2019] GET /search?query_type=or&query=hello+goodbye => generated 4341 bytes in 616 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 12/13] 10.0.2.2 () {44 vars in 1198 bytes} [Sat May  4 02:42:22 2019] GET /search?query_type=or&query=hello+goodbye&page=1&num_lines=2795&next=Next => generated 4682 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 13/14] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 02:42:24 2019] GET /search?query_type=or&query=hello+goodbye&page=2&num_lines=2795&next=Next => generated 4688 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 2/15] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 02:42:25 2019] GET /search?query_type=or&query=hello+goodbye&page=3&num_lines=2795&next=Next => generated 4741 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 14/16] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 02:42:26 2019] GET /search?query_type=or&query=hello+goodbye&page=4&num_lines=2795&next=Next => generated 4727 bytes in 10 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 1/17] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 02:42:26 2019] GET /search?query_type=or&query=hello+goodbye&page=5&num_lines=2795&next=Next => generated 4770 bytes in 44 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 15/18] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 02:42:27 2019] GET /search?query_type=or&query=hello+goodbye&page=6&num_lines=2795&next=Next => generated 4837 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/cs143/www/SearchEngine/SearchEngine/searchengine.py", line 27, in dosearch
+    search_results=search_results)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/cs143/www/SearchEngine/SearchEngine/templates/results.html", line 56, in template
+    <p><strong>Results {{ results*(page-1) + 1 }}-{{results*page}} of {{num_lines}} for </strong>{{query}}. Page {{page}</p>
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 213, in parse_if
+    'name:endif'))
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 875, in subparse
+    add_data(self.parse_tuple(with_condexpr=True))
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 620, in parse_tuple
+    args.append(parse())
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 432, in parse_expression
+    return self.parse_condexpr()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 437, in parse_condexpr
+    expr1 = self.parse_or()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 450, in parse_or
+    left = self.parse_and()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 459, in parse_and
+    left = self.parse_not()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 470, in parse_not
+    return self.parse_compare()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 474, in parse_compare
+    expr = self.parse_math1()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 496, in parse_math1
+    left = self.parse_concat()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 507, in parse_concat
+    args = [self.parse_math2()]
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 517, in parse_math2
+    left = self.parse_pow()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 528, in parse_pow
+    left = self.parse_unary()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 546, in parse_unary
+    node = self.parse_primary()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 562, in parse_primary
+    next(self.stream)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/lexer.py", line 359, in __next__
+    self.current = next(self._iter)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/lexer.py", line 562, in wrap
+    for lineno, token, value in stream:
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/lexer.py", line 683, in tokeniter
+    filename)
+jinja2.exceptions.TemplateSyntaxError: unexpected '}'
+[pid: 730|app: 0|req: 16/19] 10.0.2.2 () {46 vars in 1261 bytes} [Sat May  4 02:45:41 2019] GET /search?query_type=or&query=hello+goodbye&page=6&num_lines=2795&next=Next => generated 0 bytes in 67 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 730|app: 0|req: 17/20] 10.0.2.2 () {44 vars in 1001 bytes} [Sat May  4 02:47:11 2019] GET / => generated 1162 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/cs143/www/SearchEngine/SearchEngine/searchengine.py", line 27, in dosearch
+    search_results=search_results)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/cs143/www/SearchEngine/SearchEngine/templates/results.html", line 56, in template
+    <p><strong>Results {{results}*({page}-1) + 1 }-{{results}*{page}} of {{num_lines}} for </strong>{{query}}. Page {{page}</p>
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 213, in parse_if
+    'name:endif'))
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 875, in subparse
+    add_data(self.parse_tuple(with_condexpr=True))
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 620, in parse_tuple
+    args.append(parse())
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 432, in parse_expression
+    return self.parse_condexpr()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 437, in parse_condexpr
+    expr1 = self.parse_or()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 450, in parse_or
+    left = self.parse_and()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 459, in parse_and
+    left = self.parse_not()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 470, in parse_not
+    return self.parse_compare()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 474, in parse_compare
+    expr = self.parse_math1()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 496, in parse_math1
+    left = self.parse_concat()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 507, in parse_concat
+    args = [self.parse_math2()]
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 517, in parse_math2
+    left = self.parse_pow()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 528, in parse_pow
+    left = self.parse_unary()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 546, in parse_unary
+    node = self.parse_primary()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 562, in parse_primary
+    next(self.stream)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/lexer.py", line 359, in __next__
+    self.current = next(self._iter)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/lexer.py", line 562, in wrap
+    for lineno, token, value in stream:
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/lexer.py", line 683, in tokeniter
+    filename)
+jinja2.exceptions.TemplateSyntaxError: unexpected '}'
+[pid: 730|app: 0|req: 18/21] 10.0.2.2 () {44 vars in 1094 bytes} [Sat May  4 02:47:15 2019] GET /search?query_type=or&query=hello+goodbye => generated 0 bytes in 654 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 730|app: 0|req: 19/22] 10.0.2.2 () {44 vars in 1001 bytes} [Sat May  4 02:51:49 2019] GET / => generated 1162 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/cs143/www/SearchEngine/SearchEngine/searchengine.py", line 27, in dosearch
+    search_results=search_results)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/cs143/www/SearchEngine/SearchEngine/templates/results.html", line 56, in template
+    <p><strong>Results {{results * (page - 1) + 1}}-{{results * page}} of {{num_lines}} for </strong>{{query}}. Page {{page}</p>
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 213, in parse_if
+    'name:endif'))
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 875, in subparse
+    add_data(self.parse_tuple(with_condexpr=True))
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 620, in parse_tuple
+    args.append(parse())
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 432, in parse_expression
+    return self.parse_condexpr()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 437, in parse_condexpr
+    expr1 = self.parse_or()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 450, in parse_or
+    left = self.parse_and()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 459, in parse_and
+    left = self.parse_not()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 470, in parse_not
+    return self.parse_compare()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 474, in parse_compare
+    expr = self.parse_math1()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 496, in parse_math1
+    left = self.parse_concat()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 507, in parse_concat
+    args = [self.parse_math2()]
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 517, in parse_math2
+    left = self.parse_pow()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 528, in parse_pow
+    left = self.parse_unary()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 546, in parse_unary
+    node = self.parse_primary()
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/parser.py", line 562, in parse_primary
+    next(self.stream)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/lexer.py", line 359, in __next__
+    self.current = next(self._iter)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/lexer.py", line 562, in wrap
+    for lineno, token, value in stream:
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/lexer.py", line 683, in tokeniter
+    filename)
+jinja2.exceptions.TemplateSyntaxError: unexpected '}'
+[pid: 730|app: 0|req: 20/23] 10.0.2.2 () {44 vars in 1094 bytes} [Sat May  4 02:51:53 2019] GET /search?query_type=or&query=hello+goodbye => generated 0 bytes in 648 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 730|app: 0|req: 21/24] 10.0.2.2 () {44 vars in 1094 bytes} [Sat May  4 02:53:34 2019] GET /search?query_type=or&query=hello+goodbye => generated 4338 bytes in 620 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 22/25] 10.0.2.2 () {44 vars in 1198 bytes} [Sat May  4 02:53:43 2019] GET /search?query_type=or&query=hello+goodbye&page=1&num_lines=2795&next=Next => generated 4680 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 23/26] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 02:53:45 2019] GET /search?query_type=or&query=hello+goodbye&page=2&num_lines=2795&next=Next => generated 4686 bytes in 18 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 3/27] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 02:53:47 2019] GET /search?query_type=or&query=hello+goodbye&page=3&num_lines=2795&next=Next => generated 4739 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 24/28] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 02:53:49 2019] GET /search?query_type=or&query=hello+goodbye&page=4&num_lines=2795&next=Next => generated 4726 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 25/29] 10.0.2.2 () {46 vars in 1261 bytes} [Sat May  4 02:55:46 2019] GET /search?query_type=or&query=hello+goodbye&page=4&num_lines=2795&next=Next => generated 4726 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 26/30] 10.0.2.2 () {46 vars in 1261 bytes} [Sat May  4 02:55:50 2019] GET /search?query_type=or&query=hello+goodbye&page=4&num_lines=2795&next=Next => generated 4726 bytes in 19 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 27/31] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 02:56:00 2019] GET /search?query_type=or&query=hello+goodbye&page=5&num_lines=2795&next=Next => generated 4770 bytes in 21 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 4/32] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 02:56:00 2019] GET /search?query_type=or&query=hello+goodbye&page=6&num_lines=2795&next=Next => generated 4837 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 2/33] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 02:56:01 2019] GET /search?query_type=or&query=hello+goodbye&page=7&num_lines=2795&next=Next => generated 4719 bytes in 28 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 28/34] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 02:56:02 2019] GET /search?query_type=or&query=hello+goodbye&page=8&num_lines=2795&next=Next => generated 4850 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 5/35] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 02:56:02 2019] GET /search?query_type=or&query=hello+goodbye&page=9&num_lines=2795&next=Next => generated 4724 bytes in 23 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 1/36] 10.0.2.2 () {44 vars in 1232 bytes} [Sat May  4 02:56:03 2019] GET /search?query_type=or&query=hello+goodbye&page=10&num_lines=2795&next=Next => generated 4782 bytes in 39 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 29/37] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:04 2019] GET /search?query_type=or&query=hello+goodbye&page=11&num_lines=2795&next=Next => generated 4727 bytes in 13 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 6/38] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:04 2019] GET /search?query_type=or&query=hello+goodbye&page=12&num_lines=2795&next=Next => generated 4654 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 30/39] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:05 2019] GET /search?query_type=or&query=hello+goodbye&page=13&num_lines=2795&next=Next => generated 4792 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 7/40] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:05 2019] GET /search?query_type=or&query=hello+goodbye&page=14&num_lines=2795&next=Next => generated 4811 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 3/41] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:06 2019] GET /search?query_type=or&query=hello+goodbye&page=15&num_lines=2795&next=Next => generated 4767 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 2/42] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:07 2019] GET /search?query_type=or&query=hello+goodbye&page=16&num_lines=2795&next=Next => generated 4762 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 31/43] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:07 2019] GET /search?query_type=or&query=hello+goodbye&page=17&num_lines=2795&next=Next => generated 4758 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 8/44] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:08 2019] GET /search?query_type=or&query=hello+goodbye&page=18&num_lines=2795&next=Next => generated 4762 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 4/45] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:09 2019] GET /search?query_type=or&query=hello+goodbye&page=19&num_lines=2795&next=Next => generated 4848 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 3/46] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:09 2019] GET /search?query_type=or&query=hello+goodbye&page=20&num_lines=2795&next=Next => generated 4749 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 32/47] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:10 2019] GET /search?query_type=or&query=hello+goodbye&page=21&num_lines=2795&next=Next => generated 4695 bytes in 18 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 9/48] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:11 2019] GET /search?query_type=or&query=hello+goodbye&page=22&num_lines=2795&next=Next => generated 4674 bytes in 12 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 5/49] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:12 2019] GET /search?query_type=or&query=hello+goodbye&page=23&num_lines=2795&prev=Prev => generated 4695 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 4/50] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:12 2019] GET /search?query_type=or&query=hello+goodbye&page=22&num_lines=2795&prev=Prev => generated 4749 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 33/51] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:29 2019] GET /search?query_type=or&query=hello+goodbye&page=21&num_lines=2795&next=Next => generated 4695 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 10/52] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:29 2019] GET /search?query_type=or&query=hello+goodbye&page=22&num_lines=2795&next=Next => generated 4674 bytes in 19 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 6/53] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:29 2019] GET /search?query_type=or&query=hello+goodbye&page=23&num_lines=2795&next=Next => generated 4721 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 34/54] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:30 2019] GET /search?query_type=or&query=hello+goodbye&page=24&num_lines=2795&next=Next => generated 4739 bytes in 12 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 11/55] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:30 2019] GET /search?query_type=or&query=hello+goodbye&page=25&num_lines=2795&next=Next => generated 4802 bytes in 18 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 5/56] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:31 2019] GET /search?query_type=or&query=hello+goodbye&page=26&num_lines=2795&next=Next => generated 4762 bytes in 25 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 729|app: 0|req: 1/57] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:31 2019] GET /search?query_type=or&query=hello+goodbye&page=27&num_lines=2795&next=Next => generated 4691 bytes in 50 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 35/58] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:32 2019] GET /search?query_type=or&query=hello+goodbye&page=28&num_lines=2795&next=Next => generated 4698 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 12/59] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:33 2019] GET /search?query_type=or&query=hello+goodbye&page=29&num_lines=2795&next=Next => generated 4785 bytes in 20 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 7/60] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:33 2019] GET /search?query_type=or&query=hello+goodbye&page=30&num_lines=2795&next=Next => generated 4713 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 6/61] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:33 2019] GET /search?query_type=or&query=hello+goodbye&page=31&num_lines=2795&next=Next => generated 4724 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 36/62] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:34 2019] GET /search?query_type=or&query=hello+goodbye&page=32&num_lines=2795&next=Next => generated 4668 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 13/63] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:34 2019] GET /search?query_type=or&query=hello+goodbye&page=33&num_lines=2795&next=Next => generated 4686 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 8/64] 10.0.2.2 () {44 vars in 1233 bytes} [Sat May  4 02:56:34 2019] GET /search?query_type=or&query=hello+goodbye&page=34&num_lines=2795&next=Next => generated 4709 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 37/65] 10.0.2.2 () {44 vars in 1175 bytes} [Sat May  4 02:56:37 2019] GET /search?query_type=or&query=hello+goodbye+dad => generated 4366 bytes in 661 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 38/66] 10.0.2.2 () {44 vars in 1158 bytes} [Sat May  4 02:56:43 2019] GET /search?query_type=or&query=hello+goodbye+dad+black => generated 4353 bytes in 821 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 39/67] 10.0.2.2 () {44 vars in 1166 bytes} [Sat May  4 02:56:47 2019] GET /search?query_type=and&query=hello+goodbye+dad+black => generated 1272 bytes in 1140 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 40/68] 10.0.2.2 () {44 vars in 1153 bytes} [Sat May  4 02:56:53 2019] GET /search?query_type=or&query=hello+goodbye+dad => generated 4366 bytes in 681 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 41/69] 10.0.2.2 () {44 vars in 1148 bytes} [Sat May  4 02:56:59 2019] GET /search?query_type=and&query=hello+goodbye+dad => generated 1619 bytes in 534 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 42/70] 10.0.2.2 () {44 vars in 1207 bytes} [Sat May  4 02:57:04 2019] GET /search?query_type=and&query=hello+goodbye+dad&page=1&num_lines=2&next=Next => generated 1602 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 43/71] 10.0.2.2 () {44 vars in 1236 bytes} [Sat May  4 02:57:06 2019] GET /search?query_type=and&query=hello+goodbye+dad&page=2&num_lines=2&next=Next => generated 1602 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 14/72] 10.0.2.2 () {44 vars in 1236 bytes} [Sat May  4 02:57:07 2019] GET /search?query_type=and&query=hello+goodbye+dad&page=3&num_lines=2&next=Next => generated 1602 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 9/73] 10.0.2.2 () {44 vars in 1236 bytes} [Sat May  4 02:57:07 2019] GET /search?query_type=and&query=hello+goodbye+dad&page=4&num_lines=2&next=Next => generated 1602 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 44/74] 10.0.2.2 () {44 vars in 1236 bytes} [Sat May  4 02:57:08 2019] GET /search?query_type=and&query=hello+goodbye+dad&page=5&num_lines=2&prev=Prev => generated 1602 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 15/75] 10.0.2.2 () {44 vars in 1236 bytes} [Sat May  4 02:57:08 2019] GET /search?query_type=and&query=hello+goodbye+dad&page=4&num_lines=2&prev=Prev => generated 1602 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 7/76] 10.0.2.2 () {44 vars in 1236 bytes} [Sat May  4 02:57:09 2019] GET /search?query_type=and&query=hello+goodbye+dad&page=3&num_lines=2&prev=Prev => generated 1602 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 45/77] 10.0.2.2 () {44 vars in 1236 bytes} [Sat May  4 02:57:09 2019] GET /search?query_type=and&query=hello+goodbye+dad&page=2&num_lines=2&prev=Prev => generated 1619 bytes in 531 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 46/78] 10.0.2.2 () {44 vars in 1001 bytes} [Sat May  4 03:06:03 2019] GET / => generated 1162 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 47/79] 10.0.2.2 () {44 vars in 1120 bytes} [Sat May  4 03:06:12 2019] GET /search?query_type=or&query=hello+goodbye+say+know+why => generated 4418 bytes in 1029 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 48/80] 10.0.2.2 () {44 vars in 1153 bytes} [Sat May  4 03:06:34 2019] GET /search?query_type=or&query=someday+somehow+ => generated 4439 bytes in 619 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 49/81] 10.0.2.2 () {44 vars in 1207 bytes} [Sat May  4 03:06:37 2019] GET /search?query_type=or&query=someday+somehow+&page=1&num_lines=2305&next=Next => generated 4684 bytes in 18 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 50/82] 10.0.2.2 () {44 vars in 1239 bytes} [Sat May  4 03:06:39 2019] GET /search?query_type=or&query=someday+somehow+&page=2&num_lines=2305&next=Next => generated 4845 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 16/83] 10.0.2.2 () {44 vars in 1239 bytes} [Sat May  4 03:06:40 2019] GET /search?query_type=or&query=someday+somehow+&page=3&num_lines=2305&next=Next => generated 4714 bytes in 28 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 51/84] 10.0.2.2 () {44 vars in 1239 bytes} [Sat May  4 03:06:41 2019] GET /search?query_type=or&query=someday+somehow+&page=4&num_lines=2305&next=Next => generated 4743 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 10/85] 10.0.2.2 () {44 vars in 1239 bytes} [Sat May  4 03:06:42 2019] GET /search?query_type=or&query=someday+somehow+&page=5&num_lines=2305&next=Next => generated 4722 bytes in 25 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 52/86] 10.0.2.2 () {44 vars in 1239 bytes} [Sat May  4 03:06:42 2019] GET /search?query_type=or&query=someday+somehow+&page=6&num_lines=2305&next=Next => generated 4896 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 17/87] 10.0.2.2 () {44 vars in 1239 bytes} [Sat May  4 03:06:43 2019] GET /search?query_type=or&query=someday+somehow+&page=7&num_lines=2305&next=Next => generated 4750 bytes in 13 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 8/88] 10.0.2.2 () {44 vars in 1239 bytes} [Sat May  4 03:06:43 2019] GET /search?query_type=or&query=someday+somehow+&page=8&num_lines=2305&next=Next => generated 4805 bytes in 25 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 53/89] 10.0.2.2 () {44 vars in 1239 bytes} [Sat May  4 03:06:44 2019] GET /search?query_type=or&query=someday+somehow+&page=9&num_lines=2305&next=Next => generated 4844 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 18/90] 10.0.2.2 () {44 vars in 1241 bytes} [Sat May  4 03:06:44 2019] GET /search?query_type=or&query=someday+somehow+&page=10&num_lines=2305&next=Next => generated 4755 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 11/91] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:44 2019] GET /search?query_type=or&query=someday+somehow+&page=11&num_lines=2305&next=Next => generated 4722 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 54/92] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:45 2019] GET /search?query_type=or&query=someday+somehow+&page=12&num_lines=2305&next=Next => generated 4729 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 19/93] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:45 2019] GET /search?query_type=or&query=someday+somehow+&page=13&num_lines=2305&next=Next => generated 4779 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 12/94] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:45 2019] GET /search?query_type=or&query=someday+somehow+&page=14&num_lines=2305&next=Next => generated 4776 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 9/95] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:46 2019] GET /search?query_type=or&query=someday+somehow+&page=15&num_lines=2305&next=Next => generated 4796 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 55/96] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:46 2019] GET /search?query_type=or&query=someday+somehow+&page=16&num_lines=2305&next=Next => generated 4756 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 20/97] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:47 2019] GET /search?query_type=or&query=someday+somehow+&page=17&num_lines=2305&next=Next => generated 4813 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 729|app: 0|req: 2/98] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:47 2019] GET /search?query_type=or&query=someday+somehow+&page=18&num_lines=2305&next=Next => generated 4744 bytes in 27 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 56/99] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:47 2019] GET /search?query_type=or&query=someday+somehow+&page=19&num_lines=2305&next=Next => generated 4801 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 21/100] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:48 2019] GET /search?query_type=or&query=someday+somehow+&page=20&num_lines=2305&next=Next => generated 4728 bytes in 22 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 13/101] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:48 2019] GET /search?query_type=or&query=someday+somehow+&page=21&num_lines=2305&next=Next => generated 4814 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 57/102] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:48 2019] GET /search?query_type=or&query=someday+somehow+&page=22&num_lines=2305&next=Next => generated 4687 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 10/103] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:48 2019] GET /search?query_type=or&query=someday+somehow+&page=23&num_lines=2305&next=Next => generated 4731 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 22/104] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:49 2019] GET /search?query_type=or&query=someday+somehow+&page=24&num_lines=2305&next=Next => generated 4859 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 14/105] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:49 2019] GET /search?query_type=or&query=someday+somehow+&page=25&num_lines=2305&next=Next => generated 4761 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 729|app: 0|req: 3/106] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:49 2019] GET /search?query_type=or&query=someday+somehow+&page=26&num_lines=2305&next=Next => generated 4786 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 58/107] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:50 2019] GET /search?query_type=or&query=someday+somehow+&page=27&num_lines=2305&next=Next => generated 4767 bytes in 18 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 23/108] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:50 2019] GET /search?query_type=or&query=someday+somehow+&page=28&num_lines=2305&next=Next => generated 4886 bytes in 9 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 11/109] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:50 2019] GET /search?query_type=or&query=someday+somehow+&page=29&num_lines=2305&next=Next => generated 4815 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 15/110] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:51 2019] GET /search?query_type=or&query=someday+somehow+&page=30&num_lines=2305&next=Next => generated 4872 bytes in 12 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 59/111] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:51 2019] GET /search?query_type=or&query=someday+somehow+&page=31&num_lines=2305&next=Next => generated 4840 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 24/112] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:51 2019] GET /search?query_type=or&query=someday+somehow+&page=32&num_lines=2305&next=Next => generated 4751 bytes in 12 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 16/113] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:52 2019] GET /search?query_type=or&query=someday+somehow+&page=33&num_lines=2305&next=Next => generated 4730 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 12/114] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:52 2019] GET /search?query_type=or&query=someday+somehow+&page=34&num_lines=2305&next=Next => generated 4748 bytes in 13 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 729|app: 0|req: 4/115] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:52 2019] GET /search?query_type=or&query=someday+somehow+&page=35&num_lines=2305&next=Next => generated 4695 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 60/116] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:53 2019] GET /search?query_type=or&query=someday+somehow+&page=36&num_lines=2305&next=Next => generated 4726 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 25/117] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:53 2019] GET /search?query_type=or&query=someday+somehow+&page=37&num_lines=2305&next=Next => generated 4816 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 17/118] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:53 2019] GET /search?query_type=or&query=someday+somehow+&page=38&num_lines=2305&next=Next => generated 4783 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 61/119] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:54 2019] GET /search?query_type=or&query=someday+somehow+&page=39&num_lines=2305&next=Next => generated 4864 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 13/120] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:54 2019] GET /search?query_type=or&query=someday+somehow+&page=40&num_lines=2305&next=Next => generated 4857 bytes in 19 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 62/121] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:54 2019] GET /search?query_type=or&query=someday+somehow+&page=41&num_lines=2305&next=Next => generated 4854 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 26/122] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:54 2019] GET /search?query_type=or&query=someday+somehow+&page=42&num_lines=2305&next=Next => generated 4923 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 18/123] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:55 2019] GET /search?query_type=or&query=someday+somehow+&page=43&num_lines=2305&next=Next => generated 4867 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 14/124] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:55 2019] GET /search?query_type=or&query=someday+somehow+&page=44&num_lines=2305&next=Next => generated 4820 bytes in 12 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 63/125] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:55 2019] GET /search?query_type=or&query=someday+somehow+&page=45&num_lines=2305&next=Next => generated 4635 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 27/126] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:56 2019] GET /search?query_type=or&query=someday+somehow+&page=46&num_lines=2305&next=Next => generated 4778 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 19/127] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:56 2019] GET /search?query_type=or&query=someday+somehow+&page=47&num_lines=2305&next=Next => generated 4700 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 15/128] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:56 2019] GET /search?query_type=or&query=someday+somehow+&page=48&num_lines=2305&next=Next => generated 4695 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 64/129] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:56 2019] GET /search?query_type=or&query=someday+somehow+&page=49&num_lines=2305&next=Next => generated 4736 bytes in 18 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 28/130] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:57 2019] GET /search?query_type=or&query=someday+somehow+&page=50&num_lines=2305&next=Next => generated 4808 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 20/131] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:57 2019] GET /search?query_type=or&query=someday+somehow+&page=51&num_lines=2305&next=Next => generated 4719 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 16/132] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:57 2019] GET /search?query_type=or&query=someday+somehow+&page=52&num_lines=2305&next=Next => generated 4793 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 65/133] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:58 2019] GET /search?query_type=or&query=someday+somehow+&page=53&num_lines=2305&next=Next => generated 4830 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 29/134] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:58 2019] GET /search?query_type=or&query=someday+somehow+&page=54&num_lines=2305&next=Next => generated 4829 bytes in 13 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 729|app: 0|req: 5/135] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:59 2019] GET /search?query_type=or&query=someday+somehow+&page=55&num_lines=2305&next=Next => generated 4794 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 66/136] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:59 2019] GET /search?query_type=or&query=someday+somehow+&page=56&num_lines=2305&next=Next => generated 4806 bytes in 20 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 30/137] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:06:59 2019] GET /search?query_type=or&query=someday+somehow+&page=57&num_lines=2305&next=Next => generated 4861 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 21/138] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:00 2019] GET /search?query_type=or&query=someday+somehow+&page=58&num_lines=2305&next=Next => generated 4936 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 17/139] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:00 2019] GET /search?query_type=or&query=someday+somehow+&page=59&num_lines=2305&next=Next => generated 4787 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 729|app: 0|req: 6/140] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:00 2019] GET /search?query_type=or&query=someday+somehow+&page=60&num_lines=2305&next=Next => generated 4746 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 67/141] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:01 2019] GET /search?query_type=or&query=someday+somehow+&page=61&num_lines=2305&next=Next => generated 4731 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 31/142] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:01 2019] GET /search?query_type=or&query=someday+somehow+&page=62&num_lines=2305&next=Next => generated 4796 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 22/143] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:01 2019] GET /search?query_type=or&query=someday+somehow+&page=63&num_lines=2305&next=Next => generated 4821 bytes in 13 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 18/144] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:01 2019] GET /search?query_type=or&query=someday+somehow+&page=64&num_lines=2305&next=Next => generated 4717 bytes in 13 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 729|app: 0|req: 7/145] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:02 2019] GET /search?query_type=or&query=someday+somehow+&page=65&num_lines=2305&next=Next => generated 4761 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 68/146] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:02 2019] GET /search?query_type=or&query=someday+somehow+&page=66&num_lines=2305&next=Next => generated 4676 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 32/147] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:02 2019] GET /search?query_type=or&query=someday+somehow+&page=67&num_lines=2305&next=Next => generated 4741 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 23/148] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:02 2019] GET /search?query_type=or&query=someday+somehow+&page=68&num_lines=2305&next=Next => generated 4707 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 19/149] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:03 2019] GET /search?query_type=or&query=someday+somehow+&page=69&num_lines=2305&next=Next => generated 4775 bytes in 12 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 729|app: 0|req: 8/150] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:03 2019] GET /search?query_type=or&query=someday+somehow+&page=70&num_lines=2305&next=Next => generated 4826 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 69/151] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:03 2019] GET /search?query_type=or&query=someday+somehow+&page=71&num_lines=2305&next=Next => generated 4767 bytes in 9 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 33/152] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:04 2019] GET /search?query_type=or&query=someday+somehow+&page=72&num_lines=2305&next=Next => generated 4756 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 24/153] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:04 2019] GET /search?query_type=or&query=someday+somehow+&page=73&num_lines=2305&next=Next => generated 4801 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 70/154] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:04 2019] GET /search?query_type=or&query=someday+somehow+&page=74&num_lines=2305&next=Next => generated 4831 bytes in 18 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 20/155] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:05 2019] GET /search?query_type=or&query=someday+somehow+&page=75&num_lines=2305&next=Next => generated 4679 bytes in 12 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 34/156] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:05 2019] GET /search?query_type=or&query=someday+somehow+&page=76&num_lines=2305&next=Next => generated 4858 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 25/157] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:06 2019] GET /search?query_type=or&query=someday+somehow+&page=77&num_lines=2305&next=Next => generated 4846 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 71/158] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:06 2019] GET /search?query_type=or&query=someday+somehow+&page=78&num_lines=2305&next=Next => generated 4870 bytes in 13 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 729|app: 0|req: 9/159] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:06 2019] GET /search?query_type=or&query=someday+somehow+&page=79&num_lines=2305&next=Next => generated 4704 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 21/160] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:07 2019] GET /search?query_type=or&query=someday+somehow+&page=80&num_lines=2305&next=Next => generated 4690 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 72/161] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:07 2019] GET /search?query_type=or&query=someday+somehow+&page=81&num_lines=2305&next=Next => generated 4725 bytes in 13 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 35/162] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:07 2019] GET /search?query_type=or&query=someday+somehow+&page=82&num_lines=2305&next=Next => generated 4887 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 26/163] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:08 2019] GET /search?query_type=or&query=someday+somehow+&page=83&num_lines=2305&next=Next => generated 4766 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 22/164] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:08 2019] GET /search?query_type=or&query=someday+somehow+&page=84&num_lines=2305&next=Next => generated 4773 bytes in 13 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 729|app: 0|req: 10/165] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:08 2019] GET /search?query_type=or&query=someday+somehow+&page=85&num_lines=2305&next=Next => generated 4670 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 73/166] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:09 2019] GET /search?query_type=or&query=someday+somehow+&page=86&num_lines=2305&next=Next => generated 4699 bytes in 13 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 36/167] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:09 2019] GET /search?query_type=or&query=someday+somehow+&page=87&num_lines=2305&next=Next => generated 4812 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 27/168] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:11 2019] GET /search?query_type=or&query=someday+somehow+&page=88&num_lines=2305&next=Next => generated 4766 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 74/169] 10.0.2.2 () {44 vars in 1242 bytes} [Sat May  4 03:07:11 2019] GET /search?query_type=or&query=someday+somehow+&page=89&num_lines=2305&next=Next => generated 4792 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 75/170] 10.0.2.2 () {42 vars in 1130 bytes} [Sat May  4 03:07:16 2019] GET /search?query_type=or&query=someday+somehow+&page=110&num_lines=2305&next=Next => generated 4797 bytes in 23 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 76/171] 10.0.2.2 () {44 vars in 1245 bytes} [Sat May  4 03:07:19 2019] GET /search?query_type=or&query=someday+somehow+&page=111&num_lines=2305&next=Next => generated 4718 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 37/172] 10.0.2.2 () {44 vars in 1245 bytes} [Sat May  4 03:07:20 2019] GET /search?query_type=or&query=someday+somehow+&page=112&num_lines=2305&next=Next => generated 4746 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 28/173] 10.0.2.2 () {44 vars in 1245 bytes} [Sat May  4 03:07:20 2019] GET /search?query_type=or&query=someday+somehow+&page=113&num_lines=2305&next=Next => generated 4812 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 733|app: 0|req: 23/174] 10.0.2.2 () {44 vars in 1245 bytes} [Sat May  4 03:07:20 2019] GET /search?query_type=or&query=someday+somehow+&page=114&num_lines=2305&next=Next => generated 4789 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 77/175] 10.0.2.2 () {44 vars in 1245 bytes} [Sat May  4 03:07:21 2019] GET /search?query_type=or&query=someday+somehow+&page=115&num_lines=2305&next=Next => generated 2038 bytes in 13 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 38/176] 10.0.2.2 () {44 vars in 1245 bytes} [Sat May  4 03:07:23 2019] GET /search?query_type=or&query=someday+somehow+&page=116&num_lines=2305&prev=Prev => generated 4789 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 78/177] 10.0.2.2 () {44 vars in 1245 bytes} [Sat May  4 03:07:26 2019] GET /search?query_type=or&query=someday+somehow+&page=115&num_lines=2305&next=Next => generated 2038 bytes in 18 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 79/178] 10.0.2.2 () {44 vars in 1245 bytes} [Sat May  4 03:07:41 2019] GET /search?query_type=or&query=someday+somehow+&page=116&num_lines=2305&prev=Prev => generated 4789 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 80/179] 10.0.2.2 () {44 vars in 1169 bytes} [Sat May  4 03:07:49 2019] GET /search?query_type=or&query=jealous+lies => generated 4250 bytes in 616 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 81/180] 10.0.2.2 () {44 vars in 1133 bytes} [Sat May  4 03:07:55 2019] GET /search?query_type=and&query=jealous+lies => generated 3658 bytes in 733 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 82/181] 10.0.2.2 () {44 vars in 1132 bytes} [Sat May  4 03:08:02 2019] GET /search?query_type=or&query=tired+of+the => generated 4299 bytes in 906 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 83/182] 10.0.2.2 () {44 vars in 1133 bytes} [Sat May  4 03:08:06 2019] GET /search?query_type=and&query=tired+of+the => generated 4698 bytes in 3134 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 84/183] 10.0.2.2 () {44 vars in 1136 bytes} [Sat May  4 03:08:14 2019] GET /search?query_type=or&query=tired+of+games => generated 4369 bytes in 801 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 39/184] 10.0.2.2 () {44 vars in 1139 bytes} [Sat May  4 03:08:17 2019] GET /search?query_type=and&query=tired+of+games => generated 4517 bytes in 602 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 85/185] 10.0.2.2 () {44 vars in 1200 bytes} [Sat May  4 03:08:20 2019] GET /search?query_type=and&query=tired+of+games&page=1&num_lines=43&next=Next => generated 4950 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 86/186] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:08:23 2019] GET /search?query_type=and&query=tired+of+games&page=2&num_lines=43&next=Next => generated 1777 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 87/187] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:08:28 2019] GET /search?query_type=and&query=tired+of+games&page=3&num_lines=43&prev=Prev => generated 4950 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 88/188] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:08:30 2019] GET /search?query_type=and&query=tired+of+games&page=2&num_lines=43&next=Next => generated 1777 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 89/189] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:09:29 2019] GET /search?query_type=and&query=tired+of+games&page=3&num_lines=43&prev=Prev => generated 4950 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/cs143/www/SearchEngine/SearchEngine/searchengine.py", line 27, in dosearch
+    search_results=search_results)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/home/cs143/.local/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cs143/.local/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/cs143/www/SearchEngine/SearchEngine/templates/results.html", line 58, in top-level template code
+    <p><strong>Results {{results * (page - 1) + 1}}-{{results * page}} of {{num_lines}} for </strong>{{query}}. Page {{page}} of {{ round(num_lines/20) }}</p>
+jinja2.exceptions.UndefinedError: 'round' is undefined
+[pid: 730|app: 0|req: 90/190] 10.0.2.2 () {46 vars in 1261 bytes} [Sat May  4 03:13:28 2019] GET /search?query_type=and&query=tired+of+games&page=3&num_lines=43&prev=Prev => generated 0 bytes in 60 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 730|app: 0|req: 91/191] 10.0.2.2 () {46 vars in 1261 bytes} [Sat May  4 03:13:43 2019] GET /search?query_type=and&query=tired+of+games&page=3&num_lines=43&prev=Prev => generated 4958 bytes in 93 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 40/192] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:13:45 2019] GET /search?query_type=and&query=tired+of+games&page=2&num_lines=43&next=Next => generated 1785 bytes in 26 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 41/193] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:13:55 2019] GET /search?query_type=and&query=tired+of+games&page=3&num_lines=43&prev=Prev => generated 4958 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 92/194] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:13:57 2019] GET /search?query_type=and&query=tired+of+games&page=2&num_lines=43&next=Next => generated 1785 bytes in 13 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 93/195] 10.0.2.2 () {46 vars in 1261 bytes} [Sat May  4 03:18:13 2019] GET /search?query_type=and&query=tired+of+games&page=2&num_lines=43&next=Next => generated 1786 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 94/196] 10.0.2.2 () {46 vars in 1261 bytes} [Sat May  4 03:21:21 2019] GET /search?query_type=and&query=tired+of+games&page=2&num_lines=43&next=Next => generated 1787 bytes in 64 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 42/197] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:21:23 2019] GET /search?query_type=and&query=tired+of+games&page=3&num_lines=43&prev=Prev => generated 4958 bytes in 30 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 95/198] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:21:26 2019] GET /search?query_type=and&query=tired+of+games&page=2&num_lines=43&prev=Prev => generated 4525 bytes in 535 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 43/199] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:21:28 2019] GET /search?query_type=and&query=tired+of+games&page=1&num_lines=43&next=Next => generated 4958 bytes in 13 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 96/200] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:21:30 2019] GET /search?query_type=and&query=tired+of+games&page=2&num_lines=43&next=Next => generated 1787 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 97/201] 10.0.2.2 () {46 vars in 1261 bytes} [Sat May  4 03:22:48 2019] GET /search?query_type=and&query=tired+of+games&page=2&num_lines=43&next=Next => generated 1784 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 44/202] 10.0.2.2 () {46 vars in 1261 bytes} [Sat May  4 03:22:50 2019] GET /search?query_type=and&query=tired+of+games&page=2&num_lines=43&next=Next => generated 1784 bytes in 37 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 98/203] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:22:51 2019] GET /search?query_type=and&query=tired+of+games&page=3&num_lines=43&prev=Prev => generated 4955 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 29/204] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:22:52 2019] GET /search?query_type=and&query=tired+of+games&page=2&num_lines=43&prev=Prev => generated 4522 bytes in 602 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 99/205] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:22:54 2019] GET /search?query_type=and&query=tired+of+games&page=1&num_lines=43&next=Next => generated 4955 bytes in 13 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 45/206] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:22:55 2019] GET /search?query_type=and&query=tired+of+games&page=2&num_lines=43&next=Next => generated 1784 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 100/207] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:23:15 2019] GET /search?query_type=and&query=tired+of+games&page=3&num_lines=43&prev=Prev => generated 4955 bytes in 19 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 46/208] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:23:16 2019] GET /search?query_type=and&query=tired+of+games&page=2&num_lines=43&prev=Prev => generated 4522 bytes in 553 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 101/209] 10.0.2.2 () {46 vars in 1261 bytes} [Sat May  4 03:23:35 2019] GET /search?query_type=and&query=tired+of+games&page=2&num_lines=43&prev=Prev => generated 4522 bytes in 693 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 47/210] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:23:36 2019] GET /search?query_type=and&query=tired+of+games&page=1&num_lines=43&next=Next => generated 4955 bytes in 27 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 102/211] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:23:37 2019] GET /search?query_type=and&query=tired+of+games&page=2&num_lines=43&prev=Prev => generated 4522 bytes in 546 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 48/212] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:23:39 2019] GET /search?query_type=and&query=tired+of+games&page=1&num_lines=43&next=Next => generated 4955 bytes in 18 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 103/213] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:23:40 2019] GET /search?query_type=and&query=tired+of+games&page=2&num_lines=43&next=Next => generated 1784 bytes in 19 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 732|app: 0|req: 30/214] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:23:41 2019] GET /search?query_type=and&query=tired+of+games&page=3&num_lines=43&prev=Prev => generated 4955 bytes in 31 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 104/215] 10.0.2.2 () {44 vars in 1230 bytes} [Sat May  4 03:23:41 2019] GET /search?query_type=and&query=tired+of+games&page=2&num_lines=43&prev=Prev => generated 4522 bytes in 555 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 49/216] 10.0.2.2 () {44 vars in 1170 bytes} [Sat May  4 03:23:45 2019] GET /search?query_type=and&query=tired+of+games => generated 4522 bytes in 577 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+Sat May  4 03:23:55 2019 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /search?query_type=and&query=love+me+better (ip 10.0.2.2) !!!
+Sat May  4 03:23:55 2019 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET /search?query_type=and&query=love+me+better (10.0.2.2)
+OSError: write error
+[pid: 730|app: 0|req: 105/217] 10.0.2.2 () {44 vars in 1140 bytes} [Sat May  4 03:23:50 2019] GET /search?query_type=and&query=love+me+better => generated 0 bytes in 4870 msecs (HTTP/1.1 200) 2 headers in 0 bytes (0 switches on core 0)
+[pid: 731|app: 0|req: 50/218] 10.0.2.2 () {44 vars in 1140 bytes} [Sat May  4 03:23:53 2019] GET /search?query_type=and&query=love+me+better => generated 4636 bytes in 3468 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 106/219] 10.0.2.2 () {44 vars in 1140 bytes} [Sat May  4 03:24:06 2019] GET /search?query_type=and&query=love+me+better => generated 4636 bytes in 1362 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 107/220] 10.0.2.2 () {44 vars in 1001 bytes} [Sat May  4 03:24:12 2019] GET / => generated 1162 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 108/221] 10.0.2.2 () {44 vars in 1098 bytes} [Sat May  4 03:24:18 2019] GET /search?query_type=and&query=love+me+better => generated 4636 bytes in 1401 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 109/222] 10.0.2.2 () {44 vars in 1204 bytes} [Sat May  4 03:24:28 2019] GET /search?query_type=and&query=love+me+better&page=1&num_lines=1885&next=Next => generated 4976 bytes in 19 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 731|app: 0|req: 51/223] 10.0.2.2 () {44 vars in 1236 bytes} [Sat May  4 03:24:30 2019] GET /search?query_type=and&query=love+me+better&page=2&num_lines=1885&next=Next => generated 4972 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 730|app: 0|req: 110/224] 10.0.2.2 () {44 vars in 1236 bytes} [Sat May  4 03:24:32 2019] GET /search?query_type=and&query=love+me+better&page=3&num_lines=1885&next=Next => generated 4891 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)

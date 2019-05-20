@@ -12020,3 +12020,75 @@ OSError: write error
 [pid: 730|app: 0|req: 109/222] 10.0.2.2 () {44 vars in 1204 bytes} [Sat May  4 03:24:28 2019] GET /search?query_type=and&query=love+me+better&page=1&num_lines=1885&next=Next => generated 4976 bytes in 19 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
 [pid: 731|app: 0|req: 51/223] 10.0.2.2 () {44 vars in 1236 bytes} [Sat May  4 03:24:30 2019] GET /search?query_type=and&query=love+me+better&page=2&num_lines=1885&next=Next => generated 4972 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
 [pid: 730|app: 0|req: 110/224] 10.0.2.2 () {44 vars in 1236 bytes} [Sat May  4 03:24:32 2019] GET /search?query_type=and&query=love+me+better&page=3&num_lines=1885&next=Next => generated 4891 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /tmp/searchengine.sock removed.
+*** Starting uWSGI 2.0.18 (64bit) on [Thu May 16 14:23:52 2019] ***
+compiled with version: 7.3.0 on 30 March 2019 03:07:46
+os: Linux-4.15.0-46-generic #49-Ubuntu SMP Wed Feb 6 09:33:07 UTC 2019
+nodename: cs143-19s-p1
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /media/sf_vm-shared/SearchEngine
+detected binary path: /home/cs143/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7804
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /tmp/searchengine.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55b4bf09d3b0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55b4bf09d3b0 pid: 591 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 591)
+spawned uWSGI worker 1 (pid: 651, cores: 1)
+spawned uWSGI worker 2 (pid: 652, cores: 1)
+spawned uWSGI worker 3 (pid: 653, cores: 1)
+spawned uWSGI worker 4 (pid: 654, cores: 1)
+spawned uWSGI worker 5 (pid: 655, cores: 1)
+Python auto-reloader enabled
+*** Starting uWSGI 2.0.18 (64bit) on [Thu May 16 14:25:22 2019] ***
+compiled with version: 7.3.0 on 30 March 2019 03:07:46
+os: Linux-4.15.0-46-generic #49-Ubuntu SMP Wed Feb 6 09:33:07 UTC 2019
+nodename: cs143-19s-p1
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /media/sf_vm-shared/SearchEngine
+detected binary path: /home/cs143/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7804
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /tmp/searchengine.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55a7c435a3b0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55a7c435a3b0 pid: 717 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 717)
+spawned uWSGI worker 1 (pid: 719, cores: 1)
+spawned uWSGI worker 2 (pid: 720, cores: 1)
+spawned uWSGI worker 3 (pid: 721, cores: 1)
+spawned uWSGI worker 4 (pid: 722, cores: 1)
+spawned uWSGI worker 5 (pid: 723, cores: 1)
+Python auto-reloader enabled

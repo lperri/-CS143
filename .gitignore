@@ -2,6 +2,8 @@
 **/*.csv
 **/*.tgz
 **/*.zip
+**/*.json*
+**/*.parquet
 **/*._*
 **/*.pyc
 **/*.DS_Store

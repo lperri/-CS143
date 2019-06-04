@@ -1,11 +1,17 @@
 from __future__ import print_function
 from pyspark import SparkConf, SparkContext
 from pyspark.sql import SQLContext, SparkSession
-from pyspark.sql.functions import udf
-from pyspark.sql.types import StringType, ArrayType
+from pyspark.sql.functions import udf, col, when
+from pyspark.sql.types import StringType, ArrayType, IntegerType
 import re
 import string
 import json
+from pyspark.ml.feature import CountVectorizer
+from pyspark.ml.classification import LogisticRegression
+from pyspark.ml.tuning import CrossValidator, ParamGridBuilder
+from pyspark.ml.evaluation import BinaryClassificationEvaluator
+
+
 
 def sanitize(text):
     """Do parse the text in variable "text" according to the spec, and return
@@ -37,11 +43,13 @@ def combineNgrams(ngrams):
         return one array containing all words in the three strings of the input array '''
     unigrams, bigrams, trigrams = ngrams
     ngrams_combined = unigrams.split(" ")
-    ngrams_combined.append(bigrams.split(" "))
-    ngrams_combined.append(trigrams.split(" "))
+    for item in bigrams.split(" "):
+        ngrams_combined.append(item)
+    for item in trigrams.split(" "):
+        ngrams_combined.append(item)
     return ngrams_combined
 
-sanitize_udf = udf(lambda y: sanitize(y), ArrayType(StringType()))
+sanitize_udf = udf(lambda x: sanitize(x), ArrayType(StringType()))
 combineNgrams_udf = udf(lambda x: combineNgrams(x), ArrayType(StringType()))
 
 def main(context):
@@ -50,14 +58,60 @@ def main(context):
     submissions_df = context.read.parquet("submissions.parquet")
     labeled_data_df = context.read.parquet("labeled_data.parquet")
     comment_label_join = comments_df.join(labeled_data_df, comments_df.id == labeled_data_df._c0)
-    columns_to_drop = ['author', 'author_cakeday', 'controversiality', 'author_flair_css_class', 'can_gild', 'can_mod_post', 'collapsed', 'collapsed_reason', 'distinguished', 'edited', 'gilded', 'is_submitter', 'link_id', 'parent_id', 'permalink', 'retrieved_on', 'stickied', 'subreddit', 'subreddit_id', 'subreddit_type', '_c0']
-    comment_label_df = comment_label_join.drop(*columns_to_drop)
-    comment_label_df = comment_label_df.withColumnRenamed("_c1", "label_dem")
-    comment_label_df = comment_label_df.withColumnRenamed('_c2', 'label_gop')
-    comment_label_df = comment_label_df.withColumnRenamed('_c3', 'label_djt')
-    comment_label_df = comment_label_df.withColumn('body_sanitized', sanitize_udf(comment_label_df.body))
-    comment_label_df = comment_label_df.withColumn('ngrams_combined', combineNgrams_udf(comment_label_df.body_sanitized))
-    comment_label_df.show(20,False)
+    columns_to_drop = ['author', 'author_cakeday', 'controversiality', 'author_flair_css_class', 'can_gild', 'can_mod_post', 'collapsed', 'collapsed_reason', 'distinguished', 'edited', 'gilded', 'is_submitter', 'link_id', 'parent_id', 'permalink', 'retrieved_on', 'stickied', 'subreddit', 'subreddit_id', 'subreddit_type', '_c0', '_c1', '_c2']
+    df = comment_label_join.drop(*columns_to_drop)
+    df = df.withColumnRenamed('_c3', 'label_djt')
+    df = df.withColumn('body_sanitized', sanitize_udf(df.body))
+    df = df.withColumn('ngrams_combined', combineNgrams_udf(df.body_sanitized))
+    df = df.withColumn('poslabel', when(col("label_djt") == 1, 1).otherwise(0))
+    df = df.withColumn('neglabel', when(col("label_djt") == -1, 1).otherwise(0))
+    df = df.drop('body_sanitized')
+    df.show(5,False)
+    cv = CountVectorizer(inputCol="ngrams_combined", binary=True, outputCol="features", minDF=10.0)
+    model = cv.fit(df)
+    model.transform(df).show(truncate=False)
+
+
+    # Initialize two logistic regression models.
+    # labelCol is the column containing the label, and featuresCol is the column containing the features.
+    poslr = LogisticRegression(labelCol="poslabel", featuresCol="features", maxIter=10)
+    neglr = LogisticRegression(labelCol="neglabel", featuresCol="features", maxIter=10)
+    # This is a binary classifier so we need an evaluator that knows how to deal with binary classifiers.
+    posEvaluator = BinaryClassificationEvaluator()
+    negEvaluator = BinaryClassificationEvaluator()
+    # There are a few parameters associated with logistic regression. We do not know what they are a priori.
+    # We do a grid search to find the best parameters. We can replace [1.0] with a list of values to try.
+    # We will assume the parameter is 1.0. Grid search takes forever.
+    posParamGrid = ParamGridBuilder().addGrid(poslr.regParam, [1.0]).build()
+    negParamGrid = ParamGridBuilder().addGrid(neglr.regParam, [1.0]).build()
+    # We initialize a 5 fold cross-validation pipeline.
+    posCrossval = CrossValidator(
+        estimator=poslr,
+        evaluator=posEvaluator,
+        estimatorParamMaps=posParamGrid,
+        numFolds=5)
+    negCrossval = CrossValidator(
+        estimator=neglr,
+        evaluator=negEvaluator,
+        estimatorParamMaps=negParamGrid,
+        numFolds=5)
+    # Although crossvalidation creates its own train/test sets for
+    # tuning, we still need a labeled test set, because it is not
+    # accessible from the crossvalidator (argh!)
+    # Split the data 50/50
+    posTrain, posTest = pos.randomSplit([0.5, 0.5])
+    negTrain, negTest = neg.randomSplit([0.5, 0.5])
+    # Train the models
+    print("Training positive classifier...")
+    posModel = posCrossval.fit(posTrain)
+    print("Training negative classifier...")
+    negModel = negCrossval.fit(negTrain)
+
+# Once we train the models, we don't want to do it again. We can save the models and load them again later.
+posModel.save("pos.model")
+negModel.save("neg.model")
+
+
 
 
 if __name__ == "__main__":
